@@ -2,7 +2,7 @@
 
 ## Section 1: Project Description
 
-The project focuses on setting up a secure and cost-effective Active Directory solution using AWS services. The primary goal is to integrate AWS IAM Identity Center (SSO), AWS Managed Microsoft AD (Simple AD), EC2 login with Active Directory, and secure S3 bucket access with AD groups. Additionally, AWS SNS and SQS will be implemented for event notifications and login event handling.
+The project focuses on setting up a secure and cost-effective Active Directory solution using AWS services. The primary goal is to integrate AWS IAM Identity Center (SSO), AWS Managed Microsoft AD, EC2 login with Active Directory, and secure S3 bucket access with AD groups. Additionally, AWS SNS and SQS will be implemented for event notifications and login event handling.
 
 ## Section 2: Overview
 
@@ -21,7 +21,7 @@ The system architecture consists of:
 - **VPC with multiple subnets**:
   - Public Subnets: Hosting NAT Gateway and Internet Gateway.
   - Private Subnets: Hosting AWS Managed Microsoft AD and EC2 instances.
-- **AWS Directory Service (Simple AD)**: Provides authentication and directory services.
+- **AWS Directory Service (AWS Managed Microsoft AD)**: Provides authentication and directory services.
 - **IAM Identity Center (SSO)**: Centralized user access management.
 - **AWS SNS & SQS**: Handling notifications and login event processing.
 - **EC2 Instances**: Connecting to AD for domain-joined authentication.
@@ -34,7 +34,7 @@ The system architecture consists of:
 | UserID          | Unique identifier for users in AD            | String |
 | GroupID         | Identifier for AD user groups                | String |
 | InstanceID      | EC2 instance identifier                      | String |
-| S3BucketName    | Name of S3 bucket for AD access control      | String |
+| S3Bucket    | Name of S3 bucket for AD access control      | String |
 | EventID         | Unique event identifier for login events     | String |
 | NotificationType | Type of SNS notification (login, alert, etc.) | String |
 
